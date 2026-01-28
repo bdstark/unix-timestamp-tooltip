@@ -1,0 +1,37 @@
+body {
+    font-family: system-ui, sans-serif;
+    font-size: 12px;
+    padding: 8px;
+}
+
+.item {
+    padding: 6px;
+    border-bottom: 1px solid #ddd;
+}
+
+.label {
+    font-weight: 600;
+}
+
+.value {
+    font-family: ui-monospace, monospace;
+}
+
+pre {
+    background: #f6f8fa;
+    padding: 8px;
+    white-space: pre-wrap;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow: auto;
+    font-family: ui-monospace, monospace;
+}
+
+button {
+    margin-bottom: 8px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+}

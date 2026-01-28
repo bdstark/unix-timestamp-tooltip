@@ -1,0 +1,15 @@
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  padding: 8px;
+  width: 220px;
+}
+
+label {
+  display: block;
+  margin: 6px 0;
+}
+
+button {
+  margin-bottom: 8px;
+}

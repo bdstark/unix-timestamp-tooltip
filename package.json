@@ -1,0 +1,20 @@
+{
+  "name": "unix-timestamp-tooltip",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:content && npm run build:background && npm run copy",
+    "build:content": "esbuild src/content.ts --bundle --format=iife --outfile=dist/content.js",
+    "build:background": "esbuild src/background.ts --bundle --format=esm --outfile=dist/background.js",
+    "copy": "cp manifest.json dist/ && cp -r src/*.html src/*.css dist/",
+    "clean": "rm -rf dist",
+    "cleanbuild": "npm run clean && npm run build",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.36",
+    "esbuild": "^0.27.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
+  }
+}

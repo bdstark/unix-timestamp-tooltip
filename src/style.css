@@ -1,0 +1,98 @@
+.unix-tooltip {
+  position: fixed;
+  z-index: 2147483647;
+  background: #1e1e1e;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px;
+  border-radius: 6px;
+  min-width: 220px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  pointer-events: auto;
+}
+
+.unix-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 3px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.unix-row:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.unix-label {
+  opacity: 0.6;
+}
+
+.unix-copied {
+  color: #4caf50;
+  font-size: 11px;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.unix-selected {
+  background: rgba(100, 181, 246, 0.25);
+}
+
+.unix-tooltip:focus {
+  outline: 2px solid #64b5f6;
+}
+
+.unix-hint {
+  font-size: 10px;
+  opacity: 0.6;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.unix-context {
+  font-size: 10px;
+  opacity: 0.5;
+  text-align: right;
+  margin-bottom: 4px;
+}
+
+.unix-row span:last-child {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.unix-highlight-key {
+  background: rgba(255, 235, 59, 0.25);
+  border-radius: 3px;
+}
+
+.unix-highlight-container {
+  outline: 2px solid rgba(255, 235, 59, 0.4);
+  outline-offset: 2px;
+}
+
+.unix-row:first-of-type {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.unix-row[data-confidence] span:last-child {
+  letter-spacing: 1px;
+}
+
+.unix-selected-source {
+  background: rgba(100, 181, 246, 0.35);
+  border-radius: 3px;
+}
+
+.unix-highlight-block {
+  outline: 2px solid rgba(100, 181, 246, 0.6);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+
+.unix-ts {
+  cursor: help;
+  text-decoration: underline dotted;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+    <h3>Unix Timestamp Tooltip</h3>
+
+    <label>
+        <input type="checkbox" id="showHumanReadable" checked />
+        Show human readable format
+    </label>
+
+    <label>
+        <input type="checkbox" id="showISO8601" checked />
+        Show ISO8601 format
+    </label>
+
+    <label>
+        <input type="checkbox" id="showRelative" checked />
+        Show relative time
+    </label>
+
+    <label>
+        Confidence threshold:
+        <input type="range" id="minConfidence" min="0" max="100" step="10" />
+    </label>
+
+    <label>
+        Raw timestamp boost:
+        <input type="range" id="rawLengthBoost" min="0" max="10" step="1" />
+        <span id="rawLengthBoostValue"></span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="enableSite" checked />
+        Enable on this site
+    </label>
+
+    <script type="module" src="popup.js"></script>
+</body>
+
+</html>

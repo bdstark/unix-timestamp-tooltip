@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="panel.css" />
+</head>
+
+<body>
+    <h2>Detected Unix Timestamps</h2>
+    <button id="export">Export JSON</button>
+    <h3>Context</h3>
+    <pre id="context"></pre>
+    <div>
+        <button id="copy-context">Copy Context</button>
+    </div>
+    <button id="refresh">Refresh</button>
+    <h3>Settings</h3>
+    <div id="settings-summary"></div>
+    <label>
+        Min confidence:
+        <input type="range" id="dt-minConfidence" min="0" max="100" step="10" />
+        <span id="dt-minConfidence-value"></span>
+    </label>
+
+    <label>
+        Raw length boost:
+        <input type="range" id="dt-rawLengthBoost" min="0" max="10" step="1" />
+        <span id="dt-rawLengthBoost-value"></span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="dt-enableSite" />
+        Enable on this site
+    </label>
+
+    <hr />
+    <button id="toggle-site">Toggle on this site</button>
+    <div id="list"></div>
+
+    <script type="module" src="panel.js"></script>
+</body>
+
+</html>
