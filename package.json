@@ -4,11 +4,13 @@
   "type": "module",
   "scripts": {
     "build": "npm run build:content && npm run build:background && npm run copy",
-    "build:content": "esbuild src/content.ts --bundle --format=iife --outfile=dist/content.js",
+    "build:content": "esbuild src/content.ts --bundle --format=iife --banner:js='/*! Unix Timestamp Tooltip – Content Script. Scans visible text nodes for Unix timestamps (10–13 digits). All processing occurs locally. No data is transmitted, logged, or stored externally. */' --outfile=dist/content.js",
     "build:background": "esbuild src/background.ts --bundle --format=esm --outfile=dist/background.js",
     "copy": "cp manifest.json dist/ && cp -r src/*.html src/*.css dist/",
+    "zip": "cd dist && zip -r ../unix-timestamp-tooltip.zip . -x \"*.DS_Store\"",
     "clean": "rm -rf dist",
     "cleanbuild": "npm run clean && npm run build",
+    "package": "npm run clean && npm run build && npm run zip",
     "test": "vitest"
   },
   "devDependencies": {

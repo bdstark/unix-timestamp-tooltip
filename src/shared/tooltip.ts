@@ -17,6 +17,7 @@ export function showTooltip(
     y: number,
     pin = false
 ): void {
+    if (pinned && !pin) return;
     rowsCache = rows;
     pinned = pin;
 
@@ -24,6 +25,7 @@ export function showTooltip(
         tooltip = document.createElement("div");
         tooltip.addEventListener("mousedown", (e) => {
             if (!pinned) return;
+            if ((e.target as HTMLElement).closest(".unix-row")) return;
 
             dragging = true;
             const rect = tooltip!.getBoundingClientRect();
@@ -80,6 +82,8 @@ function render(): void {
     `;
 
         el.addEventListener("click", async () => {
+            selectedIndex = index;
+            render();
             await navigator.clipboard.writeText(row.copy);
             showCopied();
         });
@@ -92,6 +96,11 @@ function render(): void {
         hint.className = "unix-hint";
         hint.textContent = "↑ ↓ navigate • Enter copy • Esc close";
         tooltip.appendChild(hint);
+
+        const footer = document.createElement("div");
+        footer.className = "unix-footer";
+        footer.textContent = "Unix Timestamp Tooltip";
+        tooltip.appendChild(footer);
     }
 }
 

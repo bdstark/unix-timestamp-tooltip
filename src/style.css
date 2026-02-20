@@ -91,8 +91,17 @@
   border-radius: 4px;
 }
 
-
 .unix-ts {
   cursor: help;
   text-decoration: underline dotted;
+}
+
+.unix-footer {
+  margin-top: 6px;
+  padding-top: 4px;
+  font-size: 10px;
+  opacity: 0.55;
+  text-align: right;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
 }
