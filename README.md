@@ -1,6 +1,6 @@
 # Unix Timestamp Tooltip
 
-**Unix Timestamp Tooltip** is a Chrome extension that detects Unix timestamps on web pages and shows UTC/local time, ISO‑8601, and relative time formats on hover. It’s designed for developers and users working with logs, APIs, dashboards, and raw text that contains timestamps that need to be read by a human.
+**Unix Timestamp Tooltip** instantly converts Unix timestamps into human‑readable dates directly on any webpage. Designed for developers working with logs, APIs, dashboards, and raw text where timestamps need to be quickly interpreted.
 
 ---
 
@@ -23,10 +23,10 @@
 ## How It Works
 
 1. Scans text nodes on the page for 10‑ or 13‑digit numbers
-2. Automatically parses them as Unix seconds or milliseconds
-3. Assigns a confidence score based on structure and context
-4. Displays tooltip formats derived from a single parsed `Date`
-5. Updates dynamically for SPAs using a safe MutationObserver pattern
+2. Parses them as Unix seconds or milliseconds
+3. Uses a confidence scoring system to avoid false positives
+4. Generates all display formats from a single parsed `Date`
+5. Suports SPAs using a safe MutationObserver pattern
 
 ---
 
@@ -52,3 +52,17 @@ Then load the `dist/` folder via `chrome://extensions` → **Load unpacked**.
 ## License
 
 MIT
+
+---
+
+## Privacy Policy
+
+Unix Timestamp Tooltip does not collect, store, transmit, or sell any user data.
+
+The extension requires access to webpage content in order to detect timestamps, but all processing occurs locally within the user's browser.
+
+No page content is transmitted externally.
+
+User preferences (such as enable/disable state or formatting options) are stored locally using the Chrome storage API.
+
+No analytics, tracking, or external network requests are performed by the extension.
